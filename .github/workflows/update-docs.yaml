@@ -25,11 +25,12 @@ jobs:
         with:
           extra-packages: |
             devtools
-            remotes
             rcmdcheck
             pkgdown
+            reactable
             dieghernan/pkgdev
             ropenspain/rostemplate
+
           needs: website
 
       - name: Install package
