@@ -24,6 +24,8 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: 
     knitr
+Remotes:
+    r-lib/pkgdown
 Config/Needs/website: ropenspain/rostemplate, ggplot2, devtools, remotes,
     pkgsearch, htmltools
 Config/testthat/edition: 3
