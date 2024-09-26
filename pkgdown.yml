@@ -1,6 +1,6 @@
 pandoc: 3.1.11
 pkgdown: 2.1.1.9000
-pkgdown_sha: c0cbde4221b87c7e81273e804f210213129c3d83
+pkgdown_sha: 0a18bc718640aee7160a0ebbcdef5ecaae2ac4a4
 articles:
   bullets: bullets.html
   code: code.html
@@ -9,7 +9,7 @@ articles:
   headings: headings.html
   articles/highlight_test: highlight_test.html
   precompute: precompute.html
-last_built: 2024-09-19T10:36Z
+last_built: 2024-09-26T10:36Z
 urls:
   reference: https://ropenspain.github.io/rostemplate/reference
   article: https://ropenspain.github.io/rostemplate/articles
