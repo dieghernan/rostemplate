@@ -3,6 +3,7 @@ url: "https://ropenspain.github.io/rostemplate"
 template:
   bootstrap: 5
   package: rostemplate
+  light-switch: true
   opengraph:
     image:
       src: https://ropenspain.github.io/rostemplate/logo.png
