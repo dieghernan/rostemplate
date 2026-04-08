@@ -38,3 +38,14 @@
 /.quarto/
 [.]quarto_ipynb$
 ^vignettes/test-precompute\.Rmd\.orig$
+[.]markdown$
+^vignettes/\.quarto$
+^vignettes/_quarto\.yaml$
+^vignettes/_quarto\.yml$
+^\.quarto$
+^vignettes/articles/\.quarto$
+^vignettes/articles/*_files$
+^index\.qmd$
+^index_files$
+^index\.html$
+^index\.md$
