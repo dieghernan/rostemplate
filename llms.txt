@@ -76,6 +76,7 @@ los archivos `.Rbuildignore` y `.github/.gitignore`, que ignoran ciertos
 archivos cuando se compila el paquete:
 
 ``` r
+
 # Instalación via r-universe
 install.packages(
   "rostemplate",
@@ -115,6 +116,7 @@ El sitio estático se puede generar igualmente desde una sesión local en
 **RStudio**. Para ello, es necesario instalar este paquete:
 
 ``` r
+
 install.packages(
   "rostemplate",
   repos = c("https://ropenspain.r-universe.dev", "https://cloud.r-project.org")
@@ -124,6 +126,7 @@ install.packages(
 Una vez instalado, se ha de ejecutar este script:
 
 ``` r
+
 rostemplate::ros_build()
 ```
 

@@ -4,11 +4,12 @@ This vignette tests pkgdown output rendering for several use cases.
 
 ## Footnotes
 
-Yay[¹](#fn1)
+Yay[^1]
 
 ## Figures
 
 ``` r
+
 plot(1:10)
 ```
 
@@ -17,6 +18,7 @@ plot(1:10)
 ## External files
 
 ``` r
+
 x <- readLines("test.txt")
 x
 #> [1] "a" "b" "c" "d"
@@ -39,27 +41,34 @@ Second paragraph
 Some R code
 
 ``` r
+
 1 + 2
 #> [1] 3
 ```
 
 ## Tables
 
-| col 1      | col 2                                                   |     col 3     | col 4 |
-|:-----------|:--------------------------------------------------------|:-------------:|:-----:|
-| Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^{2}$$ | test  |
+| col 1 | col 2 | col 3 | col 4 |
+|:---|:---|:--:|:--:|
+| Brightness | Total brightness, total reflectance, spectral intensity | 
+``` math
+y = x^2
+``` | test |
 
 ## Math
 
-$$f(x) = \frac{1}{\sqrt{2\pi\sigma^{2}}}e^{- \frac{(x - \mu^{2})}{2\sigma^{2}}}$$
+``` math
+f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}
+```
 
-Inline equations: $y = x^{2}$
+Inline equations: $`y=x^2`$
 
 ## Code
 
 ### Line width
 
 ``` r
+
 pkgdown:::ruler()
 #> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 #> 12345678901234567890123456789012345678901234567890123456789012345678901234567890
@@ -79,12 +88,14 @@ Valid R code in `\preformatted{}`:
 R code in `R` block:
 
 ``` r
+
 mean(a + 1)
 ```
 
 R code in `r` block:
 
 ``` r
+
 mean(a + 1)
 ```
 
@@ -103,6 +114,7 @@ Non-R code in `\preformatted{}`
 ### Crayon
 
 ``` r
+
 cat(cli::col_red("This is red"), "\n")
 #> This is red
 cat(cli::col_blue("This is blue\n"), "\n")
@@ -119,6 +131,7 @@ warning(cli::style_bold("This is bold"))
 Some text
 
 ``` r
+
 stop(cli::style_italic("This is italic"))
 #> Error:
 #> ! This is italic
@@ -149,6 +162,7 @@ There should however be no bug here!
 blablablabla
 
 ``` r
+
 1 + 1
 ```
 
@@ -168,6 +182,7 @@ blop
 something nice
 
 ``` r
+
 plot(1:42)
 ```
 
@@ -202,6 +217,4 @@ making the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
 
-------------------------------------------------------------------------
-
-1.  Including **footnotes**! 😁
+[^1]: Including **footnotes**! 😁

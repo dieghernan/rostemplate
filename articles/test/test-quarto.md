@@ -58,11 +58,12 @@ that we can make sure that they work.
 
 - SMALL CAPS
 
-- Here is a footnote reference[¹](#fn1)
+- Here is a footnote reference[^1]
 
 ### Code
 
 ``` r
+
 1 + 1
 #> [1] 2
 2 + 2
@@ -88,7 +89,13 @@ Figura 1: Cute puppies
 
 ### Equations
 
-$$\frac{\partial C}{\partial t} + \frac{1}{2}\sigma^{2}S^{2}\frac{\partial^{2}C}{\partial C^{2}} + rS\frac{\partial C}{\partial S}\  = rC\qquad(1)$$
+``` math
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C
+ \qquad(1)
+```
 
 ### Cross references
 
@@ -118,6 +125,4 @@ Footnotes
 
 Callouts
 
-------------------------------------------------------------------------
-
-1.  And here is the footnote.
+[^1]: And here is the footnote.
