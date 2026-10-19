@@ -20,26 +20,38 @@ ros_metro_madrid_pal(n = 4, alpha = 0.9, rev = FALSE)
 
 - n:
 
-  Número de colores
+  Número de colores.
 
 - alpha:
 
-  Valor alfa (transparencia) de los colores. alpha = 1 es opaco y alpha
-  = 0 totalmente transparente
+  Valor alfa (transparencia) de los colores. `alpha = 1` es opaco y
+  `alpha = 0` es totalmente transparente.
 
 - rev:
 
-  Valor lógico que indica si los colores se han de mostar en orden
-  inverso.
+  Valor lógico. Si es `TRUE`, devuelve los colores en orden inverso.
 
 ## Valor
 
-Paletas de colores
+Devuelve un [vector de
+caracteres](https://rdrr.io/r/base/character.html) con los colores en
+formato hexadecimal.
+
+## Ver también
+
+[`grDevices::colorRampPalette()`](https://rdrr.io/r/grDevices/colorRamp.html)
+para interpolar colores,
+[`grDevices::adjustcolor()`](https://rdrr.io/r/grDevices/adjustcolor.html)
+para ajustar la transparencia y
+[`scales::show_col()`](https://scales.r-lib.org/reference/show_col.html)
+para visualizar una paleta.
+
+Recursos de identidad visual:
+[`ros_badge_ropenspain()`](https://ropenspain.github.io/rostemplate/reference/ros_badge_ropenspain.md)
 
 ## Ejemplos
 
 ``` r
-
 scales::show_col(ros_green_pal(9))
 
 

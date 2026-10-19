@@ -1,6 +1,6 @@
 # Testing syntax highlighter
 
-Test how `pkgdown` highlights **R** code:
+Test how **pkgdown** highlights **R** code:
 
 ``` r
 
@@ -15,22 +15,25 @@ library(dplyr)
 
 
 df <- fromJSON("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/Countrycodesfull.json")
-# Identify Commonwealth acronym
+# Identify the Commonwealth acronym.
 orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv") |>
   distinct(org_id, org_name)
 
-kable(orgsdb[grep("Common", orgsdb$org_name), ], format = "markdown")
+kable(
+  orgsdb[grep("Common", orgsdb$org_name, fixed = TRUE), ],
+  format = "markdown"
+)
 
 
 ISO_memcol <- function(df,
                        orgtosearch) {
   ind <- match(orgtosearch, unlist(df[1, "org_id"]))
-  or <- lapply(1:nrow(df), function(x) {
+  or <- lapply(seq_length(nrow(df)), function(x) {
     unlist(df[x, "org_member"])[ind]
   })
-  or <- data.frame(matrix(unlist(or)), stringsAsFactors = F)
+  or <- data.frame(matrix(unlist(or)), stringsAsFactors = FALSE)
   names(or) <- orgtosearch
-  df2 <- as.data.frame(cbind(df, or, stringsAsFactors = F))
+  df2 <- as.data.frame(cbind(df, or, stringsAsFactors = FALSE))
   return(df2)
 }
 df_org <- ISO_memcol(df, "C")
@@ -58,7 +61,7 @@ testmap <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# We add also tiny countries
+# Add tiny countries too.
 tiny <- ne_countries(50,
   "tiny_countries",
   returnclass = "sf"
@@ -66,7 +69,7 @@ tiny <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# Identify dependencies
+# Identify dependencies.
 ISOCommon <- df_org |>
   filter(!is.na(C)) |>
   select(
@@ -77,11 +80,11 @@ tiny <- left_join(tiny, ISOCommon)
 tiny$C <- coalesce(tiny$C, tiny$C_sov)
 
 
-# Projecting the map
+# Project the map.
 testmap_rob <- st_transform(testmap, "+proj=robin")
 tiny_rob <- st_transform(tiny, "+proj=robin")
 
-# Bounding box
+# Compute the bounding box.
 bbox <- st_linestring(rbind(
   c(-180, 90),
   c(180, 90),
@@ -94,7 +97,7 @@ bbox <- st_linestring(rbind(
   st_sfc(crs = 4326) |>
   st_transform(crs = "+proj=robin")
 
-# Plotting
+# Plot the map.
 par(mar = c(0, 0, 0, 0), bg = NA)
 plot(bbox,
   col = "#FFFFFF",
@@ -106,51 +109,56 @@ plot(
   col = "#B9B9B9",
   border = "#FFFFFF",
   lwd = 0.1,
-  add = T
+  add = TRUE
 )
 
+testmap_c_rob <- testmap_rob |>
+  filter(!is.na(C))
+
 plot(
-  st_geometry(testmap_rob |>
-    filter(!is.na(C))),
+  st_geometry(testmap_c_rob),
   col = "#346733",
   border = "#FFFFFF",
   lwd = 0.1,
-  add = T
+  add = TRUE
 )
 
-# By last, add tiny countries
-# All
+# Add all tiny countries.
 plot(
   st_geometry(tiny_rob),
   col = "#000000",
   bg = "#B9B9B9",
-  add = T,
+  add = TRUE,
   pch = 21
 )
-# Dependencies
+# Add dependent tiny countries.
+tiny_dependent_rob <- tiny_rob |>
+  filter(!is.na(C)) |>
+  filter(!is.na(ISO_3166_3.sov))
+
 plot(
-  st_geometry(tiny_rob |>
-    filter(!is.na(C)) |>
-    filter(!is.na(ISO_3166_3.sov))),
+  st_geometry(tiny_dependent_rob),
   bg = "#C6DEBD",
   col = "#000000",
   pch = 21,
-  add = T
+  add = TRUE
 )
-# Independent
+# Add independent tiny countries.
+tiny_independent_rob <- tiny_rob |>
+  filter(!is.na(C)) |>
+  filter(is.na(ISO_3166_3.sov))
+
 plot(
-  st_geometry(tiny_rob |>
-    filter(!is.na(C)) |>
-    filter(is.na(ISO_3166_3.sov))),
+  st_geometry(tiny_independent_rob),
   bg = "#346733",
   col = "#000000",
   pch = 21,
-  add = T
+  add = TRUE
 )
 plot(bbox,
   col = NA,
   border = "#AAAAAA",
   lwd = 1.5,
-  add = T
+  add = TRUE
 )
 ```

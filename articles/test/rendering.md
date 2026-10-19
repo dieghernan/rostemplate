@@ -1,10 +1,10 @@
-# Output Rendering
+# Output rendering
 
-This vignette tests pkgdown output rendering for several use cases.
+This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^1]
+This paragraph checks footnote rendering.[^1]
 
 ## Figures
 
@@ -13,7 +13,9 @@ Yay[^1]
 plot(1:10)
 ```
 
-![Test plot](rendering_files/figure-html/unnamed-chunk-2-1.png)
+![Scatter chart of values 1 through 10 against their index. Both axes
+range from 1 to 10, with points on a straight ascending
+diagonal.](rendering_files/figure-html/unnamed-chunk-2-1.png)
 
 ## External files
 
@@ -34,9 +36,9 @@ This should only be shown when required
 
 Multiple paragraphs
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 Some R code
 
@@ -50,18 +52,37 @@ Some R code
 
 | col 1 | col 2 | col 3 | col 4 |
 |:---|:---|:--:|:--:|
-| Brightness | Total brightness, total reflectance, spectral intensity | 
-``` math
-y = x^2
-``` | test |
+| Brightness | Total brightness, total reflectance, spectral intensity | y = x^2 | test |
 
 ## Math
 
-``` math
 f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}
-```
 
-Inline equations: $`y=x^2`$
+Inline equations: y=x^2.
+
+## Search
+
+This text should be marked as highlighted by search.
+
+This text too.
+
+## Buttons
+
+Primary
+
+Secondary
+
+Success
+
+Danger
+
+Warning
+
+Info
+
+Light
+
+Dark
 
 ## Code
 
@@ -81,25 +102,25 @@ cat(rep("xy", 100), sep = "")
 
 ### Should be highlighted
 
-Valid R code in `\preformatted{}`:
+Valid **R** code in `\preformatted{}`:
 
     mean(a + 1)
 
-R code in `R` block:
+**R** code in `R` block:
 
 ``` r
 
 mean(a + 1)
 ```
 
-R code in `r` block:
+**R** code in `r` block:
 
 ``` r
 
 mean(a + 1)
 ```
 
-Yaml
+YAML
 
 ``` yaml
 yaml: [a, 1]
@@ -107,9 +128,64 @@ yaml: [a, 1]
 
 ### Shouldn’t be highlighted
 
-Non-R code in `\preformatted{}`
+Non-**R** code in `\preformatted{}`:
 
     yaml: [a, b, c]
+
+### `pre` blocks
+
+Testing margins and copy buttons on small screens.
+
+``` r
+
+txt <- "Not wrapped; check the copy button behavior."
+```
+
+Wrapped in a `<section>` (e.g., `section > div > pre`).
+
+``` r
+
+txt <- "Wrapped in section"
+```
+
+> This is a blockquote with enough text to test the width of the code
+> block and verify whether it aligns with the paragraph width.
+>
+> ``` r
+>
+> txt <- "Wrapped in blockquote; margins are preserved."
+> ```
+>
+> Continue…
+
+- This list item includes enough text to test the width of the code
+  block and check whether it matches the paragraph width.
+
+  ``` r
+
+  txt <- "Wrapped in li; margins are preserved."
+  ```
+
+- Another bullet.
+
+  1.  Nested list.
+
+  2.  Second-level item with enough text to test the width of the code
+      block and confirm alignment with the paragraph.
+
+      ``` r
+
+      txt <- "Wrapped in li; margins are preserved."
+      ```
+
+  3.  Nested list continues.
+
+`<pre>` block inside a `<details>` element.
+
+``` r
+
+txt <- "Wrapped in details"
+```
 
 ### Crayon
 
@@ -128,20 +204,24 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Some text
+Some text.
 
 ``` r
 
-stop(cli::style_italic("This is italic"))
+stop(cli::style_italic("This is italic"), call. = FALSE)
 #> Error:
 #> ! This is italic
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
 > Single-line quote about something miscellaneous.
+
+> A **Bootstrap** 5 blockquote with footer.
+
+Someone famous in Source Title
 
 Flush  
  1 space indent  
@@ -150,7 +230,7 @@ Flush
 
 ## This section is unnumbered
 
-There should however be no bug here!
+There should be no bug here.
 
 ## Tabsets
 
@@ -159,36 +239,38 @@ There should however be no bug here!
 - Tab 1
 - Tab 2
 
-blablablabla
+Tab content.
 
 ``` r
 
 1 + 1
 ```
 
-Should be “cool” heading below
+The heading below should be “cool”.
 
 ##### cool
 
-Stuff
+More tab content.
 
-blop
+More tab content.
 
 ### Tabset without pills
 
 - Tab 1
 - Tab 2
 
-something nice
+More tab content.
 
 ``` r
 
 plot(1:42)
 ```
 
-![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
+![Scatter chart of values 1 through 42 against their index. Both axes
+range from 1 to 42, with points on a straight ascending diagonal.
+](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
-This tab should be active
+This tab should be active.
 
 ### Fading tabset
 
@@ -200,7 +282,7 @@ Hello!
 
 Bonjour!
 
-Guten tag.
+Guten Tag.
 
 ## Deep headings
 
@@ -217,4 +299,4 @@ making the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
 
-[^1]: Including **footnotes**! 😁
+[^1]: Including **footnotes**.

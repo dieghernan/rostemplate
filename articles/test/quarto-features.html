@@ -5,32 +5,34 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>quarto features • rostemplate</title>
+<title>Quarto features • rostemplate</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 <link rel="icon" sizes="any" href="../../favicon.ico">
 <link rel="manifest" href="../../site.webmanifest">
-<script src="../../lightswitch.js"></script><script src="../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- katex math --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><script src="../../katex-auto.js"></script><script src="../../lightswitch.js"></script><script src="../../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="../../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../../deps/Roboto-0.4.10/font.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../../deps/headroom-0.11.0/headroom.min.js"></script><script src="../../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../../deps/search-1.0.0/fuse.min.js"></script><script src="../../deps/search-1.0.0/mark.min.js"></script><script src="quarto-features_files/libs/quarto-html/popper.min.js"></script><script src="quarto-features_files/libs/quarto-html/tippy.umd.min.js"></script><link href="quarto-features_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="quarto-features_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="quarto-features_files/libs/quarto-contrib/bootstrap-responsive/bootstrap-responsive-ratio.css" rel="stylesheet">
 <script src="quarto-features_files/libs/quarto-contrib/kbd/kbd.js"></script><link href="quarto-features_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script src="quarto-features_files/libs/quarto-diagram/mermaid.min.js"></script><script src="quarto-features_files/libs/quarto-diagram/mermaid-init.js"></script><link href="quarto-features_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="quarto-features_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
 <script src="quarto-features_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="quarto-features_files/libs/diff2html-2.3.0/diff2html.min.css" rel="stylesheet">
 <script src="quarto-features_files/libs/diff2html-2.3.0/diff2html.min.js"></script><script src="quarto-features_files/libs/diff2html-2.3.0/diff2html-ui.min.js"></script><script src="quarto-features_files/libs/jsdiff-3.2.0/diff.js"></script><script src="quarto-features_files/libs/resemble-2.2.4/resemble.js"></script><script src="quarto-features_files/libs/PapaParse-5.3.0/papaparse.min.js"></script><link href="quarto-features_files/libs/daff-1.3.39/daff_handsontable.css" rel="stylesheet">
 <script src="quarto-features_files/libs/daff-1.3.39/daff.js"></script><link href="quarto-features_files/libs/diffviewer-0.1/diffviewer.css" rel="stylesheet">
-<script src="quarto-features_files/libs/diffviewer-0.1/diffviewer.js"></script><script src="quarto-features_files/libs/visual_diff-binding-0.1.2/visual_diff.js"></script><!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="quarto features">
+<script src="quarto-features_files/libs/diffviewer-0.1/diffviewer.js"></script><script src="quarto-features_files/libs/visual_diff-binding-0.1.2/visual_diff.js"></script><!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="Quarto features">
 <meta property="og:image" content="https://ropenspain.github.io/rostemplate/logo.png">
-<meta property="og:image:alt" content="ROpenSpain logo">
+<meta property="og:image:alt" content="Logo de rOpenSpain">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@dhernangomez">
 <meta name="twitter:site" content="@rOpenSpain">
-<!-- rogtemplate style sheet --><link href="../../BS5/rostemplate.min.css" rel="stylesheet">
+<!-- rostemplate style sheet --><link href="../../BS5/rostemplate.min.css" rel="stylesheet">
 </head>
 <body>
   <a href="#main" class="visually-hidden-focusable">Ir al contenido</a>
@@ -58,7 +60,7 @@
     <li><h6 class="dropdown-header" data-toc-skip>Sobre rOpenSpain</h6></li>
     <li><a class="dropdown-item" href="../../articles/descargas.html">Descargas de paquetes de rOpenSpain</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><h6 class="dropdown-header" data-toc-skip>Test Menu</h6></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Menú de pruebas</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
     <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
@@ -88,8 +90,8 @@
 </nav><div class="container template-quarto">
     <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../../logo.png" class="logo" alt=""><h1>quarto features</h1>
-
+      <img src="../../logo.png" class="logo" alt=""><h1>Quarto features</h1>
+      <p class="subtitle">Using this for shortcodes</p>
 
 
 
@@ -120,19 +122,93 @@
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">Take <code>penguins</code>, and then,</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">Start with <code>penguins</code>.</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="4,5,6,7" data-code-annotation="2">add new columns for the bill ratio and bill area.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="4,5,6,7" data-code-annotation="2">Add columns for the bill ratio and bill area.</span>
 </dd>
-</dl></section><section class="level2"><h2 id="diagrams">Diagrams<a class="anchor" aria-label="anchor" href="#diagrams"></a>
+</dl></section><section class="level2"><h2 id="code-filename">Code filename<a class="anchor" aria-label="anchor" href="#code-filename"></a>
+</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>matplotlib.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="matplotlib.py"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">2</span>,<span class="dv">4</span>])</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+</div>
+</section><section class="level2"><h2 id="callout-blocks">Callout blocks<a class="anchor" aria-label="anchor" href="#callout-blocks"></a>
+</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Note</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Callout types include <code>note</code>, <code>tip</code>, <code>warning</code>, <code>caution</code> and <code>important</code>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Warning</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Callouts provide a simple way to attract attention, for example, to this warning.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Important</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The default callout heading matches the type: Note, Warning, Important, Tip or Caution.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Tip With Title</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is an example of a callout with a title. Providing a callout heading is optional.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Caution</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is an example of a caution.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon"></i></div>
+<div class="callout-title-container flex-fill">Simple</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A simple callout.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container"><i class="callout-icon no-icon"></i></div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>No Icon</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No icon.</p>
+</div>
+</div>
+</section><section class="level2"><h2 id="diagrams">Diagrams<a class="anchor" aria-label="anchor" href="#diagrams"></a>
 </h2>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
-<p></p>
-<figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
   A[Hard edge] --&gt; B(Round edge)
@@ -141,7 +217,6 @@
   C --&gt; E[Result two]
 </pre>
 </div>
-<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -149,8 +224,8 @@
 </h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visual_diff html-widget html-fill-item" id="htmlwidget-0618ebdc9b9da6d07ada" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-0618ebdc9b9da6d07ada">{"x":{"old":"a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","new":"a\nb\nc\nd\ne\nf\ng\nh\ni\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","filename":"a.txt","typediff":"text"},"evals":[],"jsHooks":[]}</script>
+<div class="visual_diff html-widget html-fill-item" id="htmlwidget-511a444f602984971f62" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-511a444f602984971f62">{"x":{"old":"a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","new":"a\nb\nc\nd\ne\nf\ng\nh\ni\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","filename":"a.txt","typediff":"text"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section class="level2"><h2 id="keyboard">Keyboard<a class="anchor" aria-label="anchor" href="#keyboard"></a>
@@ -158,7 +233,138 @@
 <ul>
 <li>Keyboard shortcut: <kbd title="Shift-Ctrl-P" aria-hidden="true">Shift-Ctrl-P</kbd><span class="visually-hidden">Shift-Ctrl-P</span>
 </li>
-</ul></section><section class="level2 unnumbered"><h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</ul></section><section class="level2"><h2 id="lists">Lists<a class="anchor" aria-label="anchor" href="#lists"></a>
+</h2>
+<ul>
+<li>
+<p>Item 2</p>
+<p>Continued (indent 4 spaces)</p>
+</li>
+</ul>
+<p>Another example.</p>
+<ol type="1">
+<li><p>Ordered list</p></li>
+<li>
+<p>Item 2</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code></pre></div>
+<ol type="A">
+<li>Sub-sub-item 1</li>
+</ol>
+</li>
+</ol>
+<p>A task list.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Task 1</label></li>
+<li><label><input type="checkbox" checked>Task 2</label></li>
+</ul>
+<p>A definition.</p>
+<dl>
+<dt>term</dt>
+<dd>
+<p>definition</p>
+</dd>
+</dl></section><section class="level2"><h2 id="footnotes">Footnotes<a class="anchor" aria-label="anchor" href="#footnotes"></a>
+</h2>
+<p>Here is a footnote reference<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Here is the footnote.&lt;/p&gt;"><sup>1</sup></a> and another.<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content='&lt;p&gt;Here’s one with multiple blocks.&lt;/p&gt;
+&lt;p&gt;Subsequent paragraphs are indented to show that they belong to the previous footnote.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span class="op"&gt;{&lt;/span&gt; &lt;span class="va"&gt;some.code&lt;/span&gt; &lt;span class="op"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.&lt;/p&gt;'><sup>2</sup></a></p>
+<p>This paragraph is not part of the footnote because it is not indented.</p>
+<p>Here is an inline note.<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Inline notes are easier to write, since you do not have to pick an identifier and move down to type the note.&lt;/p&gt;"><sup>3</sup></a></p>
+</section><section class="level2"><h2 id="equations">Equations<a class="anchor" aria-label="anchor" href="#equations"></a>
+</h2>
+<p>Inline math: <span class="math inline">E = mc^{2}</span>.</p>
+<p>Display math:</p>
+<p><span class="math display">E = mc^{2}</span></p>
+</section><section class="level2"><h2 id="other-blocks">Other blocks<a class="anchor" aria-label="anchor" href="#other-blocks"></a>
+</h2>
+<div class="line-block">Line Block<br>
+  Spaces and newlines<br>
+  are preserved</div>
+<p><span class="smallcaps">This text is smallcaps</span></p>
+<p><u>This text is underlined</u></p>
+<p><mark>This text is highlighted</mark></p>
+<p>En dash: –</p>
+<p>Em dash: —</p>
+</section><section class="level2"><h2 id="shortcodes">Shortcodes<a class="anchor" aria-label="anchor" href="#shortcodes"></a>
+</h2>
+<p>The subtitle of this document is as follows: Using this for shortcodes</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAG/UlEQVR4nO3cv5JMWwPG4fbVSbkBMok/OSIRIhIyEjIRGQkREhkSGQkZCRESGS6AaCLcABfg1NtVa6qn9cz0vMU3faqep2pq7Ond3Xsn69drr97+WVtb+zUBgB36306fAAAhIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAWGmfP3+e/PjxY+Fj3759mz6+nY8fP05W6bhn98k5bGXZc4TdICCsrAyc586dWziA3r17d/rz4sWLTffJY2fPnp18+PBhcvLkyen23/bw4cPJ1atXJ2/fvp1cvHhxcunSpd9Cku0cc44n53Djxo2Fr7XMOcJu2rO2tvZrV48AFsggm8H/+/fvk2fPnk1OnDix/tiDBw+ms4rnz5+vb797927y6tWr9X0SjQze79+/nxw4cOC37b8hx5FwvH79ev0cEq6jR49Oz2FIDE6dOjW5fv36dDvnefr06fXtZc8RdpsZCCvp5s2bkyNHjvz29wzK+ZSfAXe4cOHC9NN5Bu/h0aNHk+PHj6/HIgE6fPjw9Ll/S95/375969v5d84h8Roym8ix5phnjz/HNWYqy54j7LZ/dvsAYN6TJ08mx44dmw6k8wPm2E4MhhGJPJZBN+sGGbSvXbu24bnZb6sBOM/59OnT+nZmCQnAbHTOnz+/6Qzm1q1b285u8v579+7dsN84l8w4cvzLnCOsAjMQVkoG/wykV65c2XJBfH52ksF2LEiP3/ODefZJlDZbuM5rZnDP5aLsM94jMXvz5s3091aByCxn9vG815cvXzbMNnL8i2ZWMdY4ljlHWAUCwspduson+c2MAXT2UtHYHgNvBu3Yv3//lq8xL6+RcOX9x6WmyAzk8ePHG9Zhlp1J5Rhmz2fRN7NGKMZjy5wjrAKXsFi5S1ftIndmD39CIpJLRYlZ1lGyvdNjSoDyGlkEnw/BvPH4dvv9yXOEP8EMhJWQT935pL9nz57p7/yM9YiXL19Onj59Ov33VgP5+CQ/u3awyDIxuH///uTr16/r6xI7jUdiuCgeiwIwu8i+3fFtdvkLdoOAsBIyaF6+fHny69evDT/D+PeIw/w9ERnox8A7fs9f7slXgucXsDeTy0nZb6fffFoUj8RxXJ7KZbCfP38uFcCtzhFWgYCwMnIfxOxPLh+Nbz6NRfUxG0gMhrFmMB7LIJtBeHafsTZy5syZbY8jg31u4EsEsgCeG/2WWbzOgH/nzp3pesnszCOzqbGdY5y/Sz3HlbCN813mHGEVCAj/yZnKuKQ1PvVn8J0dXBOgzBzGQJ3LRLkkNf/V3kVyw2H2y6CfBfAM7lkP2c69e/emNw1m4M9sIT+5/DZ7B3yClIX12b9lnwRyRGbZc4Td5k50VlIG8fFJPQNqBvTxddj8LbOCrJdkcM+n8/lP/ZFLSRmcM+jma7hZ19hqDSGDdGYLeb28XyKUYxj/Hcn8ccw7ePDgwr9n4B93lEdeM8efy1mZfRw6dGhy+/btDc9Z9hxhNwkI/1njno7tFpYz+9jpV3D/HxKSRGmrKCx7jrAbBASAijUQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAkBFQACoCAgAFQEBoCIgAFQEBICKgABQERAAKgICQEVAAKgICAAVAQGgIiAAVAQEgIqAAFAREAAqAgJARUAAqAgIABUBAaAiIABUBASAioAAUBEQACoCAsCk8S9FEYEXClCavAAAAABJRU5ErkJggg=="></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<section class="level3"><h3 id="a-section">A section<a class="anchor" aria-label="anchor" href="#a-section"></a>
+</h3>
+<p>Here we define a plot.</p>
+<section class="level4"><h4 id="note-the-following-plot">Note the following plot<a class="anchor" aria-label="anchor" href="#note-the-following-plot"></a>
+</h4>
+<div id="a-plot">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img src="quarto-features_files/figure-html/a-cell-1.png" alt="Scatter chart of values 1 through 3 against their index. Both axes range from 1 to 3, with points on a straight ascending diagonal." width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section><section class="level3"><h3 id="another-example">Another example<a class="anchor" aria-label="anchor" href="#another-example"></a>
+</h3>
+<p>We will define some values here. </p>
+<p>The output of that inline code cell is <span id="a-span">some code</span>.</p>
+</section></section><section class="level2"><h2 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<div id="fig-puppies" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pitbull" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig"><div aria-describedby="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="pitbull.jpg" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pitbull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) A sketch of a pit bull puppy
+</figcaption></figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-shar-pei" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig"><div aria-describedby="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="shar-pei.jpg" data-ref-parent="fig-puppies">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-shar-pei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) A sketch of a shar-pei puppy
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-puppies" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-placeholder" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig"><div aria-describedby="fig-placeholder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="data:image/png;base64,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AAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAAgh0AAAACCDQAQAAIIBABwAAgAACHQAAAAIIdAAAAAgg0AEAACCAQAcAAIAAAh0AAAACCHQAAAAIINABAAAggEAHAACAAAIdAAAAut/vb5MEZUyIR1zHAAAAAElFTkSuQmCC" data-ref-parent="fig-puppies"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-placeholder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) This is a placeholder.
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-puppies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura 1: Cute puppies (<a href="#fig-pitbull" class="quarto-xref">Figura 1 (a)</a> and <a href="#fig-shar-pei" class="quarto-xref">Figura 1 (b)</a>) and a placeholder (<a href="#fig-placeholder" class="quarto-xref">Figura 1 (c)</a>).
+</figcaption></figure>
+</div>
+</section><section class="level2"><h2 id="video">Video<a class="anchor" aria-label="anchor" href="#video"></a>
+</h2>
+<div id="fig-cern" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig"><div aria-describedby="fig-cern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wo9vZccmqwc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura 2: The video “CERN: The Journey of Discovery”.
+</figcaption></figure>
+</div>
+<p>See <a href="#fig-cern" class="quarto-xref">Figura 2</a>.</p>
+</section><section class="level2 unnumbered"><h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-JSSv059i10" class="csl-entry" role="listitem">
@@ -258,21 +464,20 @@ Wickham, Hadley. 2014. <span>«Tidy Data»</span>. <em>Journal of Statistical So
 <footer id="footer"><div class="container">
     <div class="row">
       <div class="col-md">
-        <h4 data-toc-skip>About <img src="../../logo.png" alt="rostemplate Logo" height="24">
+        <h4 data-toc-skip>About <img src="../../logo.png" alt="rostemplate logo" height="24" class="round-logo">
           rostemplate</h4>
         <p>Desarrollado por <a href="https://github.com/dieghernan/" class="external-link">Diego Hernangómez</a>. <br>Part of the <span class="ROS-light">rOpenSpain</span> project.
 </p>
         <hr class="d-md-none">
 </div>
       <div class="col-md offset-md-4">
-        <h4 data-toc-skip>About <img src="../../ROS-logo.png" alt="ROpenSpain Logo" height="24"><span class="ROS-light"> rOpenSpain</span>
+        <h4 data-toc-skip>About <img src="../../ROS-logo.png" alt="rOpenSpain logo" height="24" class="round-logo"><span class="ROS-light">
+            rOpenSpain</span>
 </h4>
         <p><a href="https://ropenspain.es/" class="external-link"><span class="ROS-light">rOpenSpain</span></a> is a community of
-          enthusiasts
-          of <strong>R</strong>, open data, and reproducibility that comes
-          together and organizes itself to create <strong>R</strong> packages of
-          the highest quality for the analysis
-          and use of Spanish data of general interest.
+          <strong>R</strong>, open data and reproducibility enthusiasts that
+          works together to create high-quality <strong>R</strong> packages for
+          the analysis and use of Spanish data of general interest.
         </p>
         <p class="fst-italic text-md-end">"rOpenSci is our form, Spanish public
           data our matter"</p>
@@ -287,7 +492,7 @@ Wickham, Hadley. 2014. <span>«Tidy Data»</span>. <em>Journal of Statistical So
         <p>Sitio creado con <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
       </div>
       <div class="col-md offset-md-4 text-center text-md-start lh-base">
-        <p>Template <a href="https://github.com/ropenspain/rostemplate/" class="external-link">rostemplate</a> by
+        <p>Template <a href="https://ropenspain.github.io/rostemplate/">rostemplate</a> by
           <a href="https://github.com/dieghernan/" class="external-link">dieghernan</a>, based on <a href="https://devcows.github.io/hugo-universal-theme/" class="external-link">Universal
             Theme for Hugo</a>.
         </p>

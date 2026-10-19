@@ -1,0 +1,125 @@
+# Quarto vignettes
+
+**pkgdown** uses **Quarto** only to generate HTML and then supplies its
+own CSS and JavaScript. When **Quarto** introduces new features,
+**pkgdown** may lag behind in supporting them. If you try something that
+does not work and is not mentioned explicitly below, please [file an
+issue](https://github.com/r-lib/pkgdown/issues) so we can look into it.
+
+## Operation
+
+**pkgdown** turns your articles directory into a **Quarto** project by
+temporarily adding a `_quarto.yml` file to that directory. You can also
+add your own to control options for all **Quarto** articles. If you do
+so and have a mix of `.qmd` and `.Rmd` files, you need to include the
+following YAML so that **R Markdown** can continue to handle the `.Rmd`
+files:
+
+``` yaml
+project:
+  render: ['*.qmd']
+```
+
+### GitHub Actions
+
+The `setup-r-dependencies` action will
+[automatically](https://github.com/r-lib/actions/tree/v2-branch/setup-r-dependencies#usage)
+install **Quarto** in **GitHub Actions** if a `.qmd` file is present in
+your repository (see the `install-quarto` parameter for more details).
+
+## Limitations
+
+- Callouts are not currently supported
+  (<https://github.com/quarto-dev/quarto-cli/issues/9963>).
+
+- **pkgdown** assumes that you are using [**Quarto** vignette
+  style](https://quarto-dev.github.io/quarto-r/articles/hello.html), or
+  more generally an HTML format with
+  [`minimal: true`](https://quarto.org/docs/output-formats/html-basics.html#minimal-html).
+  Specifically, only HTML vignettes are currently supported.
+
+- You cannot customize **Mermaid** styles with **Quarto** **Mermaid**
+  themes. If you want to change the colors, provide your own custom CSS
+  as shown in the [**Quarto**
+  documentation](https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid).
+
+- **pkgdown** passes the `lang` setting on to **Quarto**, but the set of
+  available languages is not perfectly matched. Learn how to supply your
+  own translations in the [Quarto
+  documentation](https://quarto.org/docs/authoring/language.html).
+
+## Supported features
+
+The following sections demonstrate useful **Quarto** features so that we
+can make sure they work.
+
+### Inline formatting
+
+- SMALL CAPS
+
+- Here is a footnote reference[^1]
+
+### Code
+
+``` r
+
+1 + 1
+#> [1] 2
+2 + 2
+#> [1] 4
+
+plot(1:3)
+```
+
+![Scatter chart of values 1 through 3 against their index. Both axes
+range from 1 to 3, with points on a straight ascending
+diagonal.](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
+
+### Figures
+
+![](pitbull.jpg)
+
+\(a\) A sketch of a pit bull puppy
+
+![](shar-pei.jpg)
+
+\(b\) A sketch of a shar-pei puppy
+
+Figura 1: Cute puppies
+
+### Equations
+
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2}
+\mathrm S^{2} \frac{\partial^{2} \mathrm C}{\partial \mathrm C^2} +
+\mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\\ =
+\mathrm r \mathrm C \tag{1}
+
+### Cross-references
+
+See [Figura 1](#fig-puppies) for two cute puppies.
+
+Black-Scholes ([Ecuación 1](#eq-black-scholes)) is a mathematical model
+that seeks to explain the behavior of financial derivatives, most
+commonly options.
+
+## To-do
+
+Code annotations
+
+Tabsets
+
+Citations
+
+Task lists
+
+Figures
+
+Equations
+
+Cross-references
+
+Footnotes
+
+Callouts
+
+[^1]: And here is the footnote.
