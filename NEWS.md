@@ -1,6 +1,7 @@
 # rostemplate (versión de desarrollo)
 
-- El elemento activo de la barra de navegación usa el fondo violeta y la franja superior oscura del sitio de rOpenSpain.
+- Active navigation items and links now use the dark brand violet for improved contrast. Light-mode syntax highlighting and active navigation pill interactions meet the 4.5:1 text contrast target.
+- Copy buttons use a high-contrast default background and dark text on hover and focus, and Quarto callout icons adapt to theme colors, following rOpenGov/rogtemplate@869d2ca. Callout toggle animations respect reduced-motion preferences.
 - Los mensajes dirigidos al usuario usan **cli** y se han revisado y traducido al español.
 - Nuevo modo oscuro.
 - `ros_actions_check_cron()`, `ros_actions_pkgdown_branch()` y `ros_actions_pkgdown_docs()` corrigen la instalación de flujos de trabajo.
