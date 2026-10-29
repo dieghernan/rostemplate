@@ -32,11 +32,9 @@ recomendaciones.
   antes, usa
   `usethis::create_from_github("rOpenSpain/rostemplate", fork = TRUE)`.
 - Instala todas las dependencias de desarrollo con
-  [`devtools::install_dev_deps()`](https://devtools.r-lib.org/reference/install_deps.html)
-  y comprueba que el paquete supera `R CMD check` mediante
-  [`devtools::check()`](https://devtools.r-lib.org/reference/check.html).
-  Si la comprobación no termina sin problemas, pide ayuda antes de
-  continuar.
+  `devtools::install_dev_deps()` y comprueba que el paquete supera
+  `R CMD check` mediante `devtools::check()`. Si la comprobación no
+  termina sin problemas, pide ayuda antes de continuar.
 - Crea una rama de **Git** para el *pull request* (PR) mediante
   `usethis::pr_init("descripcion-breve-del-cambio")`.
 - Realiza los cambios, crea los *commits* en **Git** y abre el PR
